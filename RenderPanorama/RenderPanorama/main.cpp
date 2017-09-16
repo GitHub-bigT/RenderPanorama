@@ -1,11 +1,12 @@
-#define GLEW_STATIC 
 #include <iostream>
-#include "3rd\include\glew\glew.h"
+#define GLEW_STATIC 
+#include "3rd\include\glew\include\GL\glew.h"
 #include "3rd\include\glfw\glfw3.h"
 #include "3rd\include\glm\glm.hpp"
 #include "3rd\include\glm\gtc\type_ptr.hpp"
 #include "3rd\include\glm\gtc\matrix_transform.hpp"
 
+#pragma comment (lib,"opengl32.lib")
 #pragma comment (lib,"./3rd/lib/glew/glew32s.lib")
 #pragma comment (lib,"./3rd/lib/glfw/glfw3.lib")
 
@@ -24,6 +25,7 @@ void main(){
 		glfwTerminate();
 	}
 	glfwMakeContextCurrent(window);
+
 	//init glew
 	glewExperimental = true;
 	glewInit();
